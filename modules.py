@@ -1,0 +1,17 @@
+import support
+
+import phones
+support.print_func("John")
+
+Money = 2000
+def AddMoney():
+   # Uncomment the following line to fix the code:
+    global Money
+    Money = Money + 1
+
+# Package Import and module-sub module use
+phones.Pots()
+phones.Isdn()
+phones.G3()
+
+
