@@ -1,7 +1,7 @@
 # Decorators ,  Getters, Setters and Deleters
 
 
-class Employee:
+class Employee(object):
 
     num_of_emps = 0
     raise_amount = 1.04
@@ -22,27 +22,27 @@ class Employee:
     def fullname(self):
         return '{} {}'.format(self.first, self.last)
 
-    # # Setter /Deleter ....This don't apply in python 2.7 ..in python 3 and above versions
-    # @fullname.setter
-    # def fullname(self, name):
-    #     first, last = name.split(' ')
-    #     self.first = first
-    #     self.last = last
+    # Setter /Deleter ....This don't apply with old style class ..new style class Employee(object)
+    @fullname.setter
+    def fullname(self, name):
+        first, last = name.split(' ')
+        self.first = first
+        self.last = last
     #
-    # #Deleter /Clean -up code Python 3
-    # @fullname.deleter
-    # def fullname(self):
-    #     print('Delete name')
-    #     self.first = None
-    #     self.last = None
+    #Deleter /Clean -up code Python 3
+    @fullname.deleter
+    def fullname(self):
+        print('Delete name')
+        self.first = None
+        self.last = None
 
 emp_1 = Employee('John', 'Smith')
 
 # Try to change the email also
-emp_1.first = 'Jim'
+# emp_1.first = 'Jim'
 
 # Setter [Try to change first and last name]
-# emp_1.fullname = 'Corey Schafer'
+emp_1.fullname = 'Corey Schafer'
 
 print(emp_1.first)
 
@@ -53,4 +53,4 @@ print(emp_1.email) # Adding the property decorator now you can access the email 
 
 print(emp_1.fullname)
 
-#del emp_1.fullname # # Doesn't apply to Python 2.7
+del emp_1.fullname # # Applies only with new style class definition
