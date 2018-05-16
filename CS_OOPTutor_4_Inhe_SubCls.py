@@ -92,6 +92,6 @@ print(isinstance(mgr_1, Employee))
 print(isinstance(mgr_1, Developer)) # Retruns false / Even though developer and manager both inherit from Employee they aren't
                                     #part of it's own inheritance
 
-print(issubclass(Developer, Employee)) #True
-print(issubclass(Manager, Employee)) # True
+print(issubclass(Developer, Employee)) # True
+print(issubclass(Manager, Employee))  # True
 print(issubclass(Manager, Developer)) # False
