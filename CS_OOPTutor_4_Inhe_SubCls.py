@@ -12,7 +12,7 @@ class Employee:
         self.email = first + '.' + last + '@gmail.com'
 
         Employee.num_of_emps += 1 # We do the count inside the __init__ method since the init method runs everytime we
-                                  # create a new employe
+                                  # create a new employees
 
     #  METHOD OF THE CLASS
     def fullname(self):
