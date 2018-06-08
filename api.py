@@ -13,6 +13,7 @@ source = response.read()
 
 data = json.loads(source) # load string -->Python object
 
+
 # print(data['list']['resources'])
 # print(json.dumps(data, indent=2))
 
@@ -32,12 +33,12 @@ data = json.loads(source) # load string -->Python object
 
 
 # print(usd_rates['USD/INR'])
-# #////////////////////////////////
-# usd_rates = dict()
+#////////////////////////////////
+usd_rates = dict()
 
-# for item in data['list']['resources']:
-#     name = item['resource']['fields']['name']
-#     price = item['resource']['fields']['price']
-#     usd_rates[name] = price
-#
-# print(50 * float(usd_rates['USD/INR']))
+for item in data['list'],['resources']:
+    name = item['resource'],['fields'],['name']
+    price = item['resource'],['fields'],['price']
+    usd_rates[name] = price
+
+print(50 * float(usd_rates['USD/INR']))
